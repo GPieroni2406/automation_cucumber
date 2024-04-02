@@ -22,7 +22,7 @@ pipeline {
                     {
                         script 
                         {
-                            bat "mvn test -DsuiteXmlFiles=testng.xml"
+                            bat "mvn test -DsuiteXmlFiles=suites/testng.xml"
                         }
                         
                     }
