@@ -2,7 +2,8 @@ package automation;
 import java.io.File;
 import java.io.IOException;
 import java.util.Set;
-
+import java.time.Duration;
+import java.util.function.Function;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;

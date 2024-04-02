@@ -36,7 +36,7 @@ pipeline {
                         script 
                         {
                           
-                           bat "mvn test -DsuiteXmlFiles=SuiteContacts.xml"
+                           bat "mvn test -DsuiteXmlFiles=suites/SuiteContacts.xml"
                         }
                         
                     }
@@ -49,7 +49,7 @@ pipeline {
                     {
                         script 
                         {
-                          bat "mvn test -DsuiteXmlFiles=SuiteLogin.xml"
+                          bat "mvn test -DsuiteXmlFiles=suites/SuiteLogin.xml"
                         }
                         
                     }
