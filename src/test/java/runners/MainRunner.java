@@ -8,7 +8,7 @@ import org.testng.annotations.DataProvider;
 
 @Test
 @CucumberOptions(features={"src/test/java/features/"},glue = {"stepsDefinitions"},monochrome = false,
-        dryRun = false,tags="@contact",plugin={"pretty","html:target/cucumber"})
+        dryRun = false,tags="@all",plugin={"pretty","html:target/cucumber"})
 public class MainRunner extends AbstractTestNGCucumberTests {
     @Override
     @DataProvider(parallel = false)

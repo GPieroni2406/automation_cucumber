@@ -1,4 +1,4 @@
-@contact
+@all
 Feature: WebDriver University - Contacto
   Scenario: Ingresando datos validos de contacto seteados
     Given Se ingresa en la pagina Web Driver Test "https://webdriveruniversity.com/"
