@@ -21,7 +21,6 @@ public class driverFactory {
 
 
     private static WebAutomator createAutomator() throws NoValidBrowserException, IOException {
-        String browser = "CHROME";
         WebAutomator automator = new WebAutomator(Browser.valueOf(getBrowser()),false,false,30);
         return automator;
     }
@@ -31,13 +30,17 @@ public class driverFactory {
     }
 
     public static String getBrowser() throws IOException { //OBTIENE EL BROSWER DE LAS PROPERTIES
+        String browserRemote = System.getProperty("browserType"); //SI ES DESDE JENKINS ME SETEA LA PROPIEDAD
         String browser = null;
         try {
-            browser = null;
-            Properties properties = new Properties();
-            FileInputStream file = new FileInputStream(System.getProperty("user.dir") + "/src/main/java/properties/config.properties");
-            properties.load(file);
-            browser = properties.getProperty("browser").trim();
+            if (browserRemote==null || browserRemote.isEmpty()){
+                Properties properties = new Properties();
+                FileInputStream file = new FileInputStream(System.getProperty("user.dir") + "/src/main/java/properties/config.properties");
+                properties.load(file);
+                browser = properties.getProperty("browser").trim();
+            }
+            else browser = browserRemote;
+
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
