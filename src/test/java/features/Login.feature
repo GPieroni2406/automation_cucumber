@@ -1,4 +1,4 @@
-@all
+@login
 Feature: WebDriver University - Login
   Background:
     Given Se ingresa en la pagina Web Driver Test Login "https://webdriveruniversity.com/"

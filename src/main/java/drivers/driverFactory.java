@@ -27,6 +27,7 @@ public class driverFactory {
 
     public static void clear(){
         webAutomator.get().closeBrowser();
+        webAutomator.remove();
     }
 
     public static String getBrowser() throws IOException { //OBTIENE EL BROSWER DE LAS PROPERTIES

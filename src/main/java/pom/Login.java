@@ -12,11 +12,12 @@ public class Login {
     private By user = By.id("text");
     private By pass = By.id("password");
     private By login = By.id("login-button");
+    private WebAutomator automator;
 
     public Login() throws NoValidBrowserException, IOException {
         this.automator = getAutomator();
     }
-    private WebAutomator automator;
+
 
     public void NavegarALaPagina(String url){
         this.automator.goTo(url);
